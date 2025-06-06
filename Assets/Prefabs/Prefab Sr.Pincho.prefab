@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6985304435861758366}
   - component: {fileID: 4386483518147081951}
   m_Layer: 0
-  m_Name: prefab pincho
+  m_Name: Prefab Sr.Pincho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

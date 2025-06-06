@@ -5,6 +5,12 @@ using UnityEngine;
 public class MoneyManager : MonoBehaviour
 {
     public float money;
+    public IUMANAGER uiManager;
+
+    void Start()
+    {
+        uiManager = FindObjectOfType<IUMANAGER>();
+    }
 
     public void UpdateMoney(float amount)
     {
@@ -16,6 +22,7 @@ public class MoneyManager : MonoBehaviour
         else
         {
             money += amount; //se suma y se asigna +=
+            uiManager.UpdateMoneyText(money.ToString());
         }
         
 
