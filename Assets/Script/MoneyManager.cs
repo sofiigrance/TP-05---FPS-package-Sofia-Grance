@@ -12,20 +12,22 @@ public class MoneyManager : MonoBehaviour
         uiManager = FindObjectOfType<IUMANAGER>();
     }
 
-    public void UpdateMoney(float amount)
+    public bool UpdateMoney(float amount)
     {
         if (money + amount < 0)
         {
             //impedir la compra
             Debug.Log("Dinero insuficiente");
+            return false;
         }
         else
         {
             money += amount; //se suma y se asigna +=
             uiManager.UpdateMoneyText(money.ToString());
+            return true;
         }
-        
 
+        
     }
 
    
